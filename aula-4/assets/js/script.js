@@ -4,13 +4,11 @@ var right_button = document.getElementById("right_button");
 right_button.addEventListener("click", incrementNumber);
 left_button.addEventListener("click", decrementNumber);
 
-
-
 var elemento = {
     number: document.getElementById("number")
 };
 
-function incrementNumber() {
+function incrementNumber(){
     var number = Number(elemento.number.innerHTML);
     if (number >= 10) {
         return;
