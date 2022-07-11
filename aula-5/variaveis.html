@@ -1,0 +1,22 @@
+<script>   
+    //  var é atribuida para globais
+    var escopoglobal = 'global';
+    // const é atribuida apenas uma vez 
+    const nome = "Emanuel"
+    function escopoLocal(){
+         // let local
+         let escopoLocalInterno = 'local';
+         return escopoLocalInterno + ' ' + nome;
+    }
+    console.log(escopoLocal());
+
+    // Comparações
+    var numero =  9;
+    var NUMERO =  '9';
+
+    console.log(numero === NUMERO);
+    console.log(9 == '9' && 9 === 9);
+    var TRUE = true;
+    console.log(!TRUE);
+
+</script>
