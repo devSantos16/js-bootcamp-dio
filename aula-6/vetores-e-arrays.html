@@ -1,0 +1,80 @@
+<script>
+    var array = ['string', 1, true, ['string', 'nome']];
+    // for(let i = 0; i < array.length; i++){
+    //     if(typeof(array[i]) == 'object'){
+    //         resultado = array[i]
+    //         for(let i = 0; i < resultado.length; i++){
+    //             console.log(resultado[i]);
+    //         }
+    //     }
+    // }
+
+    array.forEach(function (item, indice) {
+        console.log(indice + ":" + item);
+    })
+
+    array.push(['JOÃO', { nome: 'João', sobrenome: "Da Silva" }]);
+
+    atualizarArray();
+
+
+    // elimina o ultimo indice do vetor
+    array.pop();
+
+    atualizarArray();
+
+    // remove o primeiro elemento
+    array.shift();
+
+    atualizarArray();
+
+    // adiciona 1 ou varios items no inicio do array
+    array.unshift('novo item');
+
+    atualizarArray();
+
+    // retorna qual indice assinalado 
+    array.push(true);
+    var indexof = array.indexOf(true, 2);
+    console.log("DSSADSADSADASDSADSADASDSADSA" + indexof);
+
+
+    // remove  ou substitui indices do array
+    for (let i = 0; i < array.length; i++) {
+        // do indice i remove 1 e altera o valor para uma variavel aleatoria
+        array.splice(i, 1, Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5));
+    }
+    atualizarArray();
+    // slice retorna uma parte  do array existente
+    var novoArray = array.slice(0, 2);
+
+    novoArray.forEach(function (item, indice) {
+        console.log(item);
+    });
+
+    function atualizarArray() {
+        console.log("ATUALIZANDO")
+        array.forEach(function (item, indice) {
+            console.log(indice + ":" + item);
+        })
+    }
+
+    // objeto
+
+    let objeto = {
+        string: "string",
+        number: "1",
+        boolean: true,
+        object: {nome: "Emanuel"}
+    }
+
+    var pessoa = objeto.object;
+
+    console.log(objeto.object.nome);
+
+    var pessoa = objeto.object;
+
+    var {object} = objeto;
+
+    console.log({object});
+</script>
