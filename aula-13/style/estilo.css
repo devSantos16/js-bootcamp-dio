@@ -1,0 +1,41 @@
+body{
+    background-color: darkviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+}
+
+.container{
+    text-align: center;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    width: 25%;
+    height: 30%;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+.button{
+    background-color: darkviolet;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid rgb(211, 129, 252);
+    color: whitesmoke;
+    width: 40%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.input-container{
+    text-align: center;
+    padding: 15px;
+    width: 80%;
+    border-radius: 30px;
+    border: 1px solid gray;
+}
