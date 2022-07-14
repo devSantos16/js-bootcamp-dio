@@ -10,13 +10,9 @@ document.getElementById('button-event').addEventListener("click", function () {
 });
 
 function VerificarPalindromo(palavra) {
-    // Palavra não reversa
-    let palavraEspacoQuebrada = palavra.split(" ");
-    let juntarPalavraQuebrada = palavraEspacoQuebrada.join('');
-
     // Palavra reversa
-    let palavraQuebrada = juntarPalavraQuebrada.split("").reverse();
-    let juntarPalavraQuebradaReversa = palavraQuebrada.join('');
+    let palavraQuebrada = palavra.split("").reverse().join('');
+    let palavraEspacoQuebrada = palavra.split(" ").join('');
 
-    return juntarPalavraQuebrada.toLowerCase() == juntarPalavraQuebradaReversa.toLowerCase() ? "É Palindromo" : "Não é Palindromo";
+    return palavraQuebrada.toLowerCase() == palavraEspacoQuebrada.toLowerCase() ? "É Palindromo" : "Não é Palindromo";
 }
